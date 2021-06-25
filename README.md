@@ -35,4 +35,4 @@ On a more personal and technical level, this project is/was for me to practice a
 
 ## 🧠 ERD
 
-![Image of user flow diagram](/readme_images/mp-snake-erd.jpeg)
+![Image of user flow diagram](/readme_images/mp-snake-erd.jpg)
