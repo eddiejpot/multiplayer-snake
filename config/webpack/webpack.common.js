@@ -9,12 +9,12 @@ module.exports = {
     multiplayer: './src/pages/multiplayerSnake.js',
   },
 
-  output: {
-    // the [name] property will reference entry. in our case it's home,singleplayer,multiplayer
-    // filename: '[name]-[contenthash].bundle.js',
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, '../..', 'dist'),
-  },
+  // output: {
+  //   // the [name] property will reference entry. in our case it's home,singleplayer,multiplayer
+  //   filename: '[name]-[contenthash].bundle.js',
+  //   // filename: '[name].bundle.js',
+  //   path: path.resolve(__dirname, '../..', 'dist'),
+  // },
 
   plugins: [
     new MiniCssExtractPlugin(),
@@ -42,6 +42,10 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
       {
         test: /\.scss$/,
         use: [

@@ -16,6 +16,7 @@ import axios from 'axios';
  * @param {Object} currentPlayerData
  * @returns {Array} currentplayer + X other players
  */
+
 const getCustomLeaderboardData = async (currentPlayerData) => {
   // 1. get full leader board
   const { data: leaderBoard } = await axios.get('/api/leaderboard');

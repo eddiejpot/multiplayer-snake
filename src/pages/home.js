@@ -1,3 +1,6 @@
+// import css for webpack
+import './styles/styles.css';
+
 // Tool tip for multiplayer
 
 const exampleEl = document.getElementById('multiplayer');

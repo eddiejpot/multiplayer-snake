@@ -53,6 +53,12 @@ const createLeaderboardRow = (rankText, nameText, scoreInt, parent) => {
  * Creates Instructions (DOM manipulation)
  * @param {Array} leaderBoardArr takes in the customLeaderBoardArr
  */
+
+/**
+ * Creates mini leaderboard (DOM manipulation)
+ * @param {HTML Element} mainParent HTML element
+ * @param {Array} customLeaderBoardArr takes in the customLeaderBoardArr
+ */
 export const createMiniLeaderBoard = (mainParent, customLeaderBoardArr) => {
   // parent
   const miniLeaderBoardParent = createElement('div', mainParent);

@@ -24,7 +24,7 @@ const createElement = (type, parent) => {
 
 /**
  * Creates Instructions (DOM manipulation)
- * @param {Object} mainParent the parent element of this instruction div
+ * @param {HTML Element} mainParent the parent element of this instruction div
  * @param {Function} callback takes in the function to initialize game
  */
 const createGameInstructions = (callback) => {

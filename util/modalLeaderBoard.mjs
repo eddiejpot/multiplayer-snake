@@ -50,8 +50,10 @@ const createLeaderboardRow = (rankText, nameText, scoreInt, parent) => {
 /*-------------------------------------------*/
 
 /**
- *
- * @param {Array}
+ * Creates Leaderboard modal (DOM manipulation)
+ * @param {Array} customLeaderBoardArr takes in the customLeaderBoardArr
+ * @param {Function} callBackQuit callback for when quit button is clicked
+ * @param {Function} callBackPlayAgain callback for when playAgain button is clicked
  */
 const createModalLeaderBoard = (customLeaderBoardArr, callBackQuit, callBackPlayAgain) => {
   const modalParent = createElement('div', document.body);

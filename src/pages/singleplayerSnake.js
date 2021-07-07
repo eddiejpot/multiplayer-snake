@@ -1,8 +1,13 @@
 /*-------------------------------------------*/
 /* ------------------IMPORT MODULES/ CLASSES */
 /*-------------------------------------------*/
+// import css for webpack
+import './styles/styles.css';
+
+// libraries
 import p5 from 'p5';
 import axios from 'axios';
+// import { text } from 'express';
 import Snake from '../../util/snake/snake.mjs';
 import Food from '../../util/snake/food.mjs';
 
@@ -32,6 +37,7 @@ const setupWidth = Math.floor(canvasWidth / res);
 const setupHeight = Math.floor(canvasHeight / res);
 let globalScore = 0;
 let newSketch;
+let showText = false;
 
 // Globals used for the leaderoard and score
 let leaderboardModal;
@@ -41,17 +47,17 @@ let currentPlayerData;
 /* ------------------------ HELPER FUNCTIONS */
 /*-------------------------------------------*/
 
-// DOM selectors
+// ---------------- DOM selectors
 const mainSectionElement = document.querySelector('#main-section');
 const gameSectionElement = document.querySelector('#game-section');
 const miniLeaderboardSectionElement = document.querySelector('#mini-leaderboard-section');
 
-// Leaderboard modal
+// ---------------- Leaderboard modal
 const removeLeaderboardModal = () => {
   leaderboardModal.dispose();
   document.getElementById('staticBackdrop').remove();
 };
-
+// initializes leaderboard modal
 const initLeaderboardModal = async () => {
   // get leaderboard data
   let customLeaderBoardArr = await getCustomLeaderboardData(currentPlayerData);
@@ -101,7 +107,7 @@ const initLeaderboardModal = async () => {
 };
 
 /*-------------------------------------------*/
-/* ---------------------------------- SKETCH */
+/* --------------------------- GAME / SKETCH */
 /*-------------------------------------------*/
 // Snake game sketch
 const sketch = (p) => {
@@ -139,6 +145,13 @@ const sketch = (p) => {
     }
 
     return false;
+  }
+
+  // animation
+  function nomTextAnimation() {
+    p.textSize(2);
+    p.text('yum', setupWidth / 2, p.random(setupHeight / 2 - 0.2, setupHeight / 2 + 0.2));
+    p.fill(252, 252, 252);
   }
 
   // Controls
@@ -195,6 +208,7 @@ const sketch = (p) => {
     p.background(0);
     // update snake location...
     snake.update();
+
     // if snake eats food do this...
     if (checkIfFoodEaten()) {
       // make new food
@@ -211,6 +225,12 @@ const sketch = (p) => {
       const customLeaderBoardArr = await getCustomLeaderboardData(currentPlayerData);
       // update mini leader board
       updateMiniLeaderBoard(customLeaderBoardArr);
+
+      // animation
+      showText = true;
+      setTimeout(() => {
+        showText = false;
+      }, 500);
     }
 
     // if snake hits self or wall do this..
@@ -224,6 +244,11 @@ const sketch = (p) => {
     // display
     snake.show(p);
     food.show(p);
+
+    // animation
+    if (showText) {
+      nomTextAnimation();
+    }
   };
 };
 

@@ -18,7 +18,7 @@ const createElement = (type, parent) => {
 
 /**
  * Creates Score board above snake game (DOM manipulation)
- * @param {Object} mainParent the parent element of this scoreboard div
+ * @param {HTML Element} mainParent the parent element of this scoreboard div
  */
 export const createScoreboard = (mainParent) => {
   const scoreBoardMessage = createElement('h4', mainParent);
