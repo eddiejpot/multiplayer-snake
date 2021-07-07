@@ -59,7 +59,7 @@ export default class Snake {
     const lengthOfBody = this.body.length;
 
     for (let i = 0; i < lengthOfBody; i += 1) {
-      p.fill(0);
+      p.fill(248, 248, 255);
       p.noStroke();
       p.rect(this.body[i].x, this.body[i].y, 1, 1);
     }

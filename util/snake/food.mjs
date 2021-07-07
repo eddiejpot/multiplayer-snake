@@ -13,7 +13,7 @@ export default class Food {
   }
 
   show(p) {
-    p.fill(255, 0, 0);
+    p.fill(124, 252, 0);
     p.noStroke();
     p.rect(this.x, this.y, 1, 1);
   }

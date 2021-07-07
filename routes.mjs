@@ -13,6 +13,7 @@ export default function bindRoutes(app) {
   // api routes
   app.get('/api/allplayers', pageController.playersIndex);
   app.post('/api/allplayers', pageController.createPlayer);
+  app.put('/api/allplayers', pageController.updatePlayer);
   app.get('/api/leaderboard', pageController.leaderBoardIndex);
 
   // other routes

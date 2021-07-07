@@ -45,7 +45,31 @@ export default function initPageController(db) {
       name,
       score,
     });
+    console.log(playerCreatedData);
     res.send(playerCreatedData);
+  };
+
+  const updatePlayer = async (req, res) => {
+    // get data
+    const {
+      name,
+      id,
+      score,
+    } = req.body;
+    // create user
+    const playerUpdatedData = await db.Player.update(
+      {
+        name,
+        score,
+      }, {
+        where: {
+          id,
+        },
+        returning: true,
+        plain: true,
+      },
+    );
+    res.send(playerUpdatedData);
   };
   // return all functions we define in an object
   // refer to the routes file above to see this used
@@ -56,5 +80,6 @@ export default function initPageController(db) {
     playersIndex,
     leaderBoardIndex,
     createPlayer,
+    updatePlayer,
   };
 }

@@ -7,9 +7,13 @@
 }
 
 body {
-  background-color: rgb(27, 0, 77);
+  background: radial-gradient(
+    circle,
+    rgba(13, 73, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 80%
+  );
   color: aliceblue;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Press Start 2P', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,11 +23,82 @@ body {
 }
 
 #main-section {
-  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-button {
+.main-title {
+  font-size: 6rem;
+  color: rgb(255, 255, 255);
+  margin: 1rem;
+}
+
+.my-container {
+  text-align: center;
+}
+
+.my-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem;
+}
+
+#main-section a {
+  color: rgb(0, 183, 255);
+}
+
+#main-section a {
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  color: #00d7c3;
+}
+#main-section a:hover {
+  box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+}
+
+/* SINGLE PLAYER PAGE */
+
+/* name form */
+#main-section input {
+  text-align: center;
+  height: 4rem;
+}
+#main-section button {
+  height: 3rem;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  color: #4d4d4d;
+}
+#main-section button:hover {
+  color: #00d7c3;
+  box-shadow: 0 0 1px 0 #00d7c3 inset, 0 0 10px 2px #00d7c3;
+}
+
+.single-player-name-form {
+  width: 80%;
+}
+
+/* Instructions */
+.controls-text {
+  text-align: justify;
+  margin-left: 70%;
+}
+
+/* Leaderboard */
+.highlight-player {
+  background-color: rgb(221, 255, 143);
+}
+
+.my-modal-content {
+  color: aliceblue;
+  background-color: rgb(5, 5, 5);
+}
+
+/* button {
   padding: 2rem;
   font-weight: bold;
   background-color: rgb(177, 255, 98);
-}
+} */
