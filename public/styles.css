@@ -24,11 +24,16 @@ body {
 
 #main-section {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .main-title {
   font-size: 6rem;
   color: rgb(255, 255, 255);
@@ -62,17 +67,17 @@ body {
 /* SINGLE PLAYER PAGE */
 
 /* name form */
-#main-section input {
+#form-instruction-section input {
   text-align: center;
   height: 4rem;
 }
-#main-section button {
+#form-instruction-section button {
   height: 3rem;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
   color: #4d4d4d;
 }
-#main-section button:hover {
+#form-instruction-section button:hover {
   color: #00d7c3;
   box-shadow: 0 0 1px 0 #00d7c3 inset, 0 0 10px 2px #00d7c3;
 }
@@ -84,7 +89,46 @@ body {
 /* Instructions */
 .controls-text {
   text-align: justify;
-  margin-left: 70%;
+  padding: 2rem;
+}
+
+#form-instruction-section .my-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Game */
+#mini-leaderboard-section {
+  width: 30%;
+  height: 100%;
+}
+#game-section {
+  width: 70%;
+  height: 100%;
+}
+
+.leaderboard-title {
+  margin-bottom: 1.5rem;
+}
+
+.mini-leaderboard .list-group {
+  font-size: 0.8rem;
+}
+
+.mini-leaderboard .list-group-item {
+  background-color: rgb(29, 29, 29);
+  color: rgb(71, 71, 71);
+}
+
+.mini-leaderboard .my-badge {
+  background: none;
+  color: rgb(71, 71, 71);
+}
+
+.mini-leaderboard .highlight-player {
+  background-color: rgb(197, 255, 61);
+  color: rgb(29, 29, 29);
 }
 
 /* Leaderboard */

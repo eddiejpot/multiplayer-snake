@@ -1,8 +1,11 @@
 /*-------------------------------------------*/
 /* ------------------IMPORT MODULES/ CLASSES */
 /*-------------------------------------------*/
-import { createCookie } from './cookieModule.mjs';
+import { createCookie } from './cookies.mjs';
 
+/*-------------------------------------------*/
+/* ------------------------ HELPER FUNCTIONS */
+/*-------------------------------------------*/
 /**
  * Helper function to create element
  * @param {String} type e.g. 'div'
@@ -14,12 +17,18 @@ const createElement = (type, parent) => {
   return creation;
 };
 
-/*
- * DOM manipulation to create form for user to enter name
+/*-------------------------------------------*/
+/* ----------------------------- MAIN MODULE */
+/*-------------------------------------------*/
+
+/**
+ * Creates Instructions (DOM manipulation)
+ * @param {Function} callback takes in the function to initialize instructions
  */
-const createAskUserNameForm = (mainParent, callback) => {
+const createAskUserNameForm = (callback) => {
+  const parent = document.querySelector('#form-instruction-section');
   // form
-  const form = createElement('div', mainParent);
+  const form = createElement('div', parent);
   form.classList.add('single-player-name-form');
 
   // row one
@@ -53,11 +62,14 @@ const createAskUserNameForm = (mainParent, callback) => {
       // set cookie
       createCookie('name', nameInput.value);
       // delete form
-      mainParent.innerHTML = '';
+      form.remove();
       // go to game instructions
       callback();
     }
   });
 };
 
+/*-------------------------------------------*/
+/* --------------------------- EXPORT MODULE */
+/*-------------------------------------------*/
 export default createAskUserNameForm;
