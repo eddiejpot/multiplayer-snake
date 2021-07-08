@@ -9,7 +9,8 @@
     "start": "node index.mjs",
     "startdev": "nodemon index.mjs",
     "watch": "webpack --watch --config config/webpack/webpack.dev.js",
-    "data-reset": "npx sequelize db:seed:undo:all && npx sequelize db:migrate:undo:all && npx sequelize db:migrate && npx sequelize db:seed:all"
+    "data-reset": "npx sequelize-cli db:seed:undo:all && npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "data-resetdev": "npx sequelize db:seed:undo:all && npx sequelize db:migrate:undo:all && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "repository": {
     "type": "git",
