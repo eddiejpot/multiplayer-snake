@@ -22,9 +22,7 @@ let sequelize;
 
 // If env is production, retrieve database auth details from the
 // DATABASE_URL env var that Heroku provides us
-console.log('In index.mjs');
 if (env === 'production') {
-  console.log('IN PRODUCTION!!!!');
   console.log(process.env);
   // Break apart the Heroku database url and rebuild the configs we need
   const { DATABASE_URL } = process.env;
