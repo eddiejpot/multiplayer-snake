@@ -8,20 +8,20 @@ import './styles/styles.css';
 import p5 from 'p5';
 import axios from 'axios';
 // import { text } from 'express';
-import Snake from '../../util/snake/snake.mjs';
-import Food from '../../util/snake/food.mjs';
+import Snake from '../../utils/snake/snake.mjs';
+import Food from '../../utils/snake/food.mjs';
 
-import { getCookie, deleteCookie, createCookie } from '../../util/cookies.mjs';
+import { getCookie, deleteCookie, createCookie } from '../../utils/cookies.mjs';
 
 // DOM HELPER MODULES
-import createAskUserNameForm from '../../util/playerName.mjs';
-import createGameInstructions from '../../util/gameInstructions.mjs';
-import { createMiniLeaderBoard, updateMiniLeaderBoard } from '../../util/miniLeaderBoard.mjs';
-import createModalLeaderBoard from '../../util/modalLeaderBoard.mjs';
-import addPlayerToDb from '../../util/db_modules/addPlayerToDb.mjs';
-import updatePlayerScoreDb from '../../util/db_modules/updatePlayerScoreDb.mjs';
-import getCustomLeaderboardData from '../../util/db_modules/customLeaderBoardData.mjs';
-import { createScoreboard, updateScoreboard } from '../../util/scoreBoard.mjs';
+import createAskUserNameForm from '../../utils/playerName.mjs';
+import createGameInstructions from '../../utils/gameInstructions.mjs';
+import { createMiniLeaderBoard, updateMiniLeaderBoard } from '../../utils/miniLeaderBoard.mjs';
+import createModalLeaderBoard from '../../utils/modalLeaderBoard.mjs';
+import addPlayerToDb from '../../utils/db_modules/addPlayerToDb.mjs';
+import updatePlayerScoreDb from '../../utils/db_modules/updatePlayerScoreDb.mjs';
+import getCustomLeaderboardData from '../../utils/db_modules/customLeaderBoardData.mjs';
+import { createScoreboard, updateScoreboard } from '../../utils/scoreBoard.mjs';
 
 /*-------------------------------------------*/
 /* --------------------------------- GLOBALS */
