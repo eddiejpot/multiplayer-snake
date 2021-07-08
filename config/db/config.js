@@ -9,6 +9,7 @@ module.exports = {
   production: {
     use_env_variable: 'DATABASE_URL',
     database: 'd55kffarh2mfmp',
+    host: 'ec2-52-86-25-51.compute-1.amazonaws.com',
     dialect: 'postgres',
     protocol: 'postgres',
     dialectOptions: {
