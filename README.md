@@ -12,7 +12,13 @@ On a more technical level, this project is/was for me to practice and learn more
 - AJAX
 - ORM (Sequelize)
 - Webpack
-- Socket.io
+- Socket.io (NOT YET DONE)
+
+## ✋ How the app works
+
+**VIDEO TUTORIAL (NON-TECHNICAL)**
+[![DemoVideo](/readme_images/snake_app_video_image.jpg)](https://youtu.be/Mdt3nHJNAow 'DemoVideo')
+_Click the image to direct to video_
 
 ## 🌈 Features
 
